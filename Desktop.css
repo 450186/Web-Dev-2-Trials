@@ -23,6 +23,12 @@
     .Movie button {
         margin-bottom: 16px auto;
     }
+    .featured-movie .Poster {
+        max-width: 50%;
+    }
+    .Poster {
+        object-fit: fill;
+    }
     .featured-movie {
         grid-column: span 2;
         display: flex;
