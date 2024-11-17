@@ -1,0 +1,50 @@
+@media (min-width: 1024px) {
+    nav {
+        display: flex;
+        gap: 48px;
+    }
+    nav a {
+        text-decoration: none;
+        color: white;
+    }
+    header {
+        justify-content: space-around;
+        box-shadow: 5px 5px 10px black;
+    }
+    .Movies {
+        display: grid;
+        grid-template-columns: 1fr, 1fr;
+        margin: auto;
+        grid-gap: 48px;
+    }
+    .Movie {
+        box-shadow: 5px 5px 10px black;
+    }
+    .Movie button {
+        margin-bottom: 16px auto;
+    }
+    .featured-movie {
+        grid-column: span 2;
+        display: flex;
+    }
+    .featured-content {
+         display: flex;
+         flex-flow: row nowrap;
+    }
+    /* .featured-movie .Poster {
+        flex: 1;
+        max-height: 50%%;
+    }
+    .featured-content {
+        flex: 1;
+    } */
+    .wide {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    }
+    .wide button {
+        grid-column: 2;
+    }
+}

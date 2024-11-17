@@ -1,62 +1,77 @@
-body {
-    margin: 0;
-    padding: 0;
-    color: white;
-    background-color: #EEF36A;
-    font-family: "Lato", sans-serif;
-}
+@media (min-width: 360px) {
+    body {
+        margin: 0;
+        padding: 0;
+        color: white;
+        background-color: #ffffff;
+        font-family: "Lato", sans-serif;
+    }
 
-p {
-    margin-top: 0;
-}
+    p {
+        margin-top: 0;
+    }
 
-h1 {
-    font-size: 2em;
-}
-nav {
-    display: none;
-}
-header {
-    background-color: #231651;
-    margin-bottom: 16px;
-    padding: 16px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
-header button {
-    max-width: 20%;
-}
-button {
-    font-size: 2em;
-    border-radius: 16px;
-    margin: 16px;
-    margin-right: 16px;
-    padding: 16px;
-    width: 80%;
-    cursor: pointer;
-    font-family: "Teko", sans-serif;
-}
-img {
-    width: 100%;
-}
-.Movies {
-    display: flex;
-    color: black;
-    flex-flow: row wrap; 
-    background-color: #4DCCDD;
-    font-size: 1.5em;
-    margin-bottom: 16px;
-    max-width: 900px;
-}
-.Movie {
-    display: flex;
-    flex-flow: column;
+    h1 {
+        font-size: 2em;
+    }
 
-}
-.Movie button {
-    width: 90%;
-    font-size: 2em;
-    margin-bottom: 16px;
+    nav {
+        display: none;
+    }
+
+    header {
+        background-color: #231651;
+        margin-bottom: 16px;
+        padding: 16px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header button {
+        max-width: 20%;
+
+    }
+
+    button {
+        font-size: 2em;
+        border-radius: 16px;
+        margin: 16px;
+        margin-right: 16px;
+        padding: 16px;
+        width: 80%;
+        cursor: pointer;
+        font-family: "Teko", sans-serif;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .Movies {
+        display: flex;
+        color: black;
+        flex-flow: row wrap;
+        background-color: #ffffff;
+        font-size: 1.5em;
+        margin-bottom: 16px;
+        max-width: 900px;#
+
+    }
+
+    .Movie {
+        display: flex;
+        flex-flow: column;
+        border: 1.5px solid black;
+        background-color: #4dccbd;
+        margin-bottom: 16px; 
+    }
+
+    .Movie button {
+        font-size: 2em;
+        margin-bottom: 16px;
+        align-self: center;
+        font-size: 2em;
+    }
 }
