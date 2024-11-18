@@ -27,9 +27,13 @@
     }
     .Movie {
         box-shadow: 5px 5px 10px black;
-        margin-bottom: 0px auto;
+        margin-bottom: 0px;
     }
-    .Movie button {
-        margin-top: auto;
+    .featured-content {
+        display: flex;
+        flex-flow: column;
+    }
+    .featured-content button {
+        margin-top: 16px auto;
     }
 }
