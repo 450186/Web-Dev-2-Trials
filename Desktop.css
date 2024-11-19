@@ -2,55 +2,90 @@
     nav {
         display: flex;
         gap: 48px;
+        flex-grow: 1;
+        justify-content: center;
     }
+
     nav a {
         text-decoration: none;
         color: white;
     }
+
     header {
-        justify-content: space-around;
+        justify-content: space-evenly;
         box-shadow: 5px 5px 10px black;
     }
+
+    header button {
+        max-width: 10%;
+        min-width: 20%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    h1 {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+
     .Movies {
         display: grid;
         grid-template-columns: 1fr, 1fr;
         margin: auto;
         grid-gap: 48px;
     }
+
     .Movie {
         box-shadow: 5px 5px 10px black;
+        margin-bottom: 0;
+        flex-grow: 1;
     }
+
     .Movie button {
-        margin-bottom: 16px auto;
+        margin-bottom: 16px;
+        margin-top: auto
     }
-    .featured-movie .Poster {
-        max-width: 50%;
+
+    .Featured-image {
+        max-width: 100px;
+        object pos
+        height: auto;
     }
-    .Poster {
-        object-fit: fill;
+    .featured-content button {
+        height: calc(100% - 32px);
     }
+    img {
+        min-height: 100%;
+        min-width: 100%;
+    }
+
     .featured-movie {
         grid-column: span 2;
         display: flex;
+        background-color: #eef36a;
     }
+
     .featured-content {
-         display: flex;
-         flex-flow: row nowrap;
+        display: flex;
+        flex-flow: row nowrap;
     }
-    /* .featured-movie .Poster {
-        flex: 1;
-        max-height: 50%%;
-    }
-    .featured-content {
-        flex: 1;
-    } */
+
     .wide {
-    grid-column: span 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        flex-grow: 1;
     }
+
+    .wide-Content {
+        flex-grow: 1;
+    }
+
     .wide button {
-        grid-column: 2;
+        /* margin-top: auto; */
+        margin-bottom: 16px;
+    }
+    .wide:last-of-type {
+        margin-bottom: 16px;
     }
 }

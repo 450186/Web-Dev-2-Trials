@@ -7,7 +7,10 @@
         justify-content: space-between;
         box-shadow: 5px 5px 10px black;
     }
-
+    header button {
+        max-width: 10%;
+        min-width: 20%;
+    }
     nav {
         display: flex;
         gap: 32px;
@@ -28,12 +31,15 @@
     .Movie {
         box-shadow: 5px 5px 10px black;
         margin-bottom: 0px;
+        height: 100%;
+    }
+    .Movie button {
+        margin-top: auto;
     }
     .featured-content {
-        display: flex;
-        flex-flow: column;
+        flex-grow: 1;
     }
-    .featured-content button {
-        margin-top: 16px auto;
+    .wide-Content {
+        flex-grow: 1;
     }
 }

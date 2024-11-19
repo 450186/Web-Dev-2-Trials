@@ -31,14 +31,13 @@
 
     header button {
         max-width: 20%;
-
+        min-width: 30%;
     }
 
     button {
         font-size: 2em;
         border-radius: 16px;
         margin: 16px;
-        margin-right: 16px;
         padding: 16px;
         width: 80%;
         cursor: pointer;
@@ -73,5 +72,17 @@
         margin-bottom: 16px;
         align-self: center;
         font-size: 2em;
+    }
+    .featured-content {
+        display: flex;
+        flex-flow: column
+    }
+    .featured-content button {
+        margin-top: auto;
+        align-self: center;
+    }
+    .wide-Content {
+        display: flex;
+        flex-flow: column;
     }
 }
