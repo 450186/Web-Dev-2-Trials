@@ -1,3 +1,6 @@
+/* these styles will only apply if the screen size is bigger than 1024px. */
+/* All gaps paddings and margins are set to either 16px or 48px depending
+on whether they are set to follow Large spacing or Small spacing. */
 @media (min-width: 1024px) {
     nav {
         display: flex;
@@ -16,24 +19,34 @@
         box-shadow: 5px 5px 10px black;
     }
 
+    /* flex-grow and flex-basis are used to properly fit all of the
+elements on the header without making the button too big AND make
+the navigation stay in the middle of the screen to make it look
+nicer. */
     header button {
         max-width: 10%;
         min-width: 20%;
         flex-basis: 0;
         flex-grow: 1;
     }
+
     h1 {
         flex-grow: 1;
         flex-basis: 0;
     }
 
+    /* Changed the grid-gap to 48px as per the specification. making 
+the grid 2 columns and not specifying the rows to ensure 
+scalability */
     .Movies {
         display: grid;
-        grid-template-columns: 1fr, 1fr;
+        grid-template-columns: repeat(2, 1fr);
         margin: auto;
         grid-gap: 48px;
     }
 
+    /* Flex-grow means that all of teh .movie's fill the available
+space. */
     .Movie {
         box-shadow: 5px 5px 10px black;
         margin-bottom: 0;
@@ -45,19 +58,41 @@
         margin-top: auto
     }
 
+    /* setting the height of the image is necessary for the featured
+image because otherwise it would be maximum height which is too big
+and makes it look unproffesional. I then use object-fit: cover
+to make the image full scale within the available area. I then
+have to use object-position to change the x and y axis to get the
+image into a suitable position where you can see all of the actor's
+head And the entire title without any of it being cut off.
+the first parameter of position is the x axis and the second one is
+the y axis. */
     .Featured-image {
         max-width: 100px;
-        object pos
-        height: auto;
+        height: 500px;
+        object-position: 50% 44%;
+        object-fit: cover;
     }
+
+    /* I needed the featured button to be the full size of the row
+it is in in the grid, but i also needed it to keep its margins,
+because it has 16px on both the top and bottom, I needed to add
+those together and - it from the full size of the height. */
     .featured-content button {
         height: calc(100% - 32px);
     }
+/* Makes all images take up maximum 100% of the width and height 
+of the space available. */
     img {
         min-height: 100%;
         min-width: 100%;
     }
-
+/* Needed the featured movie to take up both columns. I needed to
+also now make it a flexbox as opposed to a grid. I also changed
+the background colour of the featured movie because I believe if
+the featured movie needs to be different and stand out more, 
+changing the background colour distinguishes it from the other
+movies. */
     .featured-movie {
         grid-column: span 2;
         display: flex;
@@ -68,24 +103,17 @@
         display: flex;
         flex-flow: row nowrap;
     }
-
+/* I made the wide contents into grid format to make it 50/50 
+split with between the image and the content on the right. */
     .wide {
         grid-column: span 2;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-        flex-grow: 1;
     }
-
-    .wide-Content {
-        flex-grow: 1;
-    }
-
-    .wide button {
-        /* margin-top: auto; */
-        margin-bottom: 16px;
-    }
+/* This is used to add a bottom margin to the last .wide to make
+it not connect with the end of the page. */
     .wide:last-of-type {
-        margin-bottom: 16px;
+        margin-bottom: 48px;
     }
 }

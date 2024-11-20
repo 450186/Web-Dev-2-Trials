@@ -1,16 +1,24 @@
+/* these styles will only apply if the screen size is between 720px and 1024px. */
+/* All gaps paddings and margins are set to either 16px or 32px depending
+on whether they are set to follow Large spacing or Small spacing. */
 @media (min-width: 720px) and (max-width: 1024px){
+    /* the font size for the h1 is 2em for mobiles but it has to be
+    3em for anything bigger, hence the restyle. */
     h1 {
         font-size: 3em;
     }
-
+/* Needed to add a box shadow to the header. */
     header {
-        justify-content: space-between;
         box-shadow: 5px 5px 10px black;
     }
     header button {
         max-width: 10%;
         min-width: 20%;
     }
+    /* the nav tag needed to be styled because it currently had the
+    display: none attribute. 32px gap is necessary as the nav had to
+    be set to 32px because it is supposed to use "Large spacing" as
+    stated in the brief*/
     nav {
         display: flex;
         gap: 32px;
@@ -20,7 +28,12 @@
         color: white;
         text-decoration: none;
     }
-
+/* Change the Movies from a flexbox in the mobile css to a grid. grid
+is more useful to get the desired layout than using a flexbox. I want it
+take up 90% of the page and be in the center of it. I do that by setting the 
+width to 90% and the margin to be automatic. the grid-template-columns
+makes sure that there is 2 columns and they both take up the same amount of
+the space they have to work with. */
     .Movies {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -28,6 +41,8 @@
         width: 90%;
         margin: auto;
     }
+/* I got rid of the margin-bottom because it was being used in 
+conjunction with the grid-gaps and was making the spaces way too big. */
     .Movie {
         box-shadow: 5px 5px 10px black;
         margin-bottom: 0px;
@@ -36,6 +51,8 @@
     .Movie button {
         margin-top: auto;
     }
+/* Makes it so that the content takes up the remaining space in the div
+it is in. */
     .featured-content {
         flex-grow: 1;
     }

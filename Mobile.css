@@ -1,4 +1,11 @@
+/* This is the base style sheet. This is used when the screen size is bigger than 360px. */
+/* ALl gaps margins and paddings are set to 16px here because that was 
+the brief. */
 @media (min-width: 360px) {
+    /* Set the margins and padding of the body to 0. making the text colour white by default and making
+    the background the colour of ffffff as stated in the brief. I used white as the background colour
+    because it doesnt turn the user's head away from the actual content of the website by having a bright
+    colour as the background. I have also set the base font to be Lato per the specification. */
     body {
         margin: 0;
         padding: 0;
@@ -10,15 +17,19 @@
     p {
         margin-top: 0;
     }
-
+/* The font size for the h1 element has to be set to 2em according to the brief. this is set to change
+in other css files. */
     h1 {
         font-size: 2em;
     }
-
+/* On the mobile screen size, there is no navigation bar, that comes when the screen size is over 
+ */
     nav {
         display: none;
     }
-
+/* Using the semnatic tag header as opposed to an unnecessary div. I make the 
+background colour one from the brief. I chose a darker colour to again avoid drawing
+the user's attentions away from the actual content of the website. */
     header {
         background-color: #231651;
         margin-bottom: 16px;
@@ -33,7 +44,11 @@
         max-width: 20%;
         min-width: 30%;
     }
-
+/* All buttons need to have the font Teko, and they also have to have a border radius
+of 16px and a font size of 2em similar to the h1. I have set the width to 80% which is
+perfect for the watch now buttons and also doesnt affect the search button because
+that is being styled to be max width 20% above and because it is above this style it
+takes priority. */
     button {
         font-size: 2em;
         border-radius: 16px;
@@ -47,7 +62,8 @@
     img {
         width: 100%;
     }
-
+/* The font size of the movies is supposed to be set to 1.5em and according to the
+brief the movies should never be bigger than 900px. */
     .Movies {
         display: flex;
         color: black;
@@ -55,10 +71,11 @@
         background-color: #ffffff;
         font-size: 1.5em;
         margin-bottom: 16px;
-        max-width: 900px;#
-
+        max-width: 900px;
     }
-
+/* Setting the background colour to be bright is an important design choice. Users
+are attracted to bright colours and drawn towards them, which is what you want for your
+main content of your web page. */
     .Movie {
         display: flex;
         flex-flow: column;
@@ -68,15 +85,15 @@
     }
 
     .Movie button {
-        font-size: 2em;
-        margin-bottom: 16px;
         align-self: center;
-        font-size: 2em;
     }
+
     .featured-content {
         display: flex;
         flex-flow: column
     }
+/* makes sure that the button of the featured content it at the buttom of the section
+(-bottom margin) and that it is centered. */
     .featured-content button {
         margin-top: auto;
         align-self: center;
