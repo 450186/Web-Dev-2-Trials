@@ -16,11 +16,16 @@ the brief. */
 
     p {
         margin-top: 0;
+        padding-left: 16px;
     }
 /* The font size for the h1 element has to be set to 2em according to the brief. this is set to change
 in other css files. */
     h1 {
         font-size: 2em;
+    }
+
+    h2 {
+        padding-left: 16px;
     }
 /* On the mobile screen size, there is no navigation bar, that comes when the screen size is over 
  */
