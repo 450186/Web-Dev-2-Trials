@@ -1,19 +1,27 @@
 /* these styles will only apply if the screen size is between 720px and 1024px. */
 /* All gaps paddings and margins are set to either 16px or 32px depending
 on whether they are set to follow Large spacing or Small spacing. */
-@media (min-width: 720px) and (max-width: 1024px){
+@media (min-width: 720px){
     /* the font size for the h1 is 2em for mobiles but it has to be
     3em for anything bigger, hence the restyle. */
+     /* flex-grow and flex-basis are used to properly fit all of the
+elements on the header without making the button too big AND make
+the navigation stay in the middle of the screen to make it look
+nicer. */
     h1 {
         font-size: 3em;
+        flex-basis: 0;
+        flex-grow: 1;
     }
 /* Needed to add a box shadow to the header. */
     header {
+        justify-content: space-evenly;
         box-shadow: 5px 5px 10px black;
     }
     header button {
         max-width: 10%;
-        min-width: 20%;
+        flex-basis: 0;
+        flex-grow: 1;
     }
     /* the nav tag needed to be styled because it currently had the
     display: none attribute. 32px gap is necessary as the nav had to
@@ -22,6 +30,8 @@ on whether they are set to follow Large spacing or Small spacing. */
     nav {
         display: flex;
         gap: 32px;
+        flex-grow: 1;
+        justify-content: center;
     }
 
     nav a {
@@ -40,11 +50,12 @@ the space they have to work with. */
         grid-gap: 32px;
         width: 90%;
         margin: auto;
+        margin-bottom: 32px;
     }
 /* I got rid of the margin-bottom because it was being used in 
 conjunction with the grid-gaps and was making the spaces way too big. */
     .Movie {
-        box-shadow: 5px 5px 10px black;
+        box-shadow: 5px 5px 3px grey;
         margin-bottom: 0px;
         height: 100%;
     }

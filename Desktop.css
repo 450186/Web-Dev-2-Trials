@@ -3,60 +3,22 @@
 on whether they are set to follow Large spacing or Small spacing. */
 @media (min-width: 1024px) {
     nav {
-        display: flex;
         gap: 48px;
-        flex-grow: 1;
-        justify-content: center;
     }
 
-    nav a {
-        text-decoration: none;
-        color: white;
-    }
-
-    header {
-        justify-content: space-evenly;
-        box-shadow: 5px 5px 10px black;
-    }
-
-    /* flex-grow and flex-basis are used to properly fit all of the
-elements on the header without making the button too big AND make
-the navigation stay in the middle of the screen to make it look
-nicer. */
-    header button {
-        max-width: 10%;
-        min-width: 20%;
-        flex-basis: 0;
-        flex-grow: 1;
-    }
-
-    h1 {
-        flex-grow: 1;
-        flex-basis: 0;
-        font-size: 3em;
-    }
-
-    /* Changed the grid-gap to 48px as per the specification. making 
-the grid 2 columns and not specifying the rows to ensure 
-scalability */
+    /* Changed the grid-gap to 48px as per the specification. */
     .Movies {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        margin: auto;
         grid-gap: 48px;
     }
 
-    /* Flex-grow means that all of teh .movie's fill the available
+    /* Flex-grow means that all of the .movie's fill the available
 space. */
     .Movie {
-        box-shadow: 5px 5px 10px black;
-        margin-bottom: 0;
         flex-grow: 1;
     }
 
     .Movie button {
         margin-bottom: 16px;
-        margin-top: auto;
     }
 
     /* setting the height of the image is necessary for the featured
